@@ -1,0 +1,67 @@
+/* ListProduct.css */
+
+.list-product {
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.list-product h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+}
+
+.listproduct-format-main {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px 100px 120px 60px;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+  font-weight: 500;
+  color: #555;
+}
+
+.listproduct-allproducts {
+  margin-top: 10px;
+}
+
+.listproduct {
+  border-bottom: 1px solid #ddd;
+}
+
+.listproduct-product-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.listproduct-remove-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.listproduct-remove-icon:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .listproduct-format-main {
+    grid-template-columns: 80px 1fr 80px 80px 100px 40px;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .listproduct-product-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .listproduct-remove-icon {
+    width: 16px;
+    height: 16px;
+  }
+}

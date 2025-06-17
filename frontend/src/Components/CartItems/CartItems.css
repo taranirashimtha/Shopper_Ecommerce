@@ -1,0 +1,228 @@
+/* CartItems.css */
+
+.cartitems {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto 40px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.cartitems-format-main {
+  display: grid;
+  grid-template-columns: 80px 2fr 1fr 1fr 1fr 50px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.cartitems-format {
+  display: grid;
+  grid-template-columns: 80px 2fr 1fr 1fr 1fr 50px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.carticon-product-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cartitems-quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cartitems-quantity button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cartitems-quantity button:hover {
+  background-color: #0056b3;
+}
+
+.cartitems-quantity span {
+  min-width: 22px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.cart-remove-icon {
+  width: 22px;
+  height: 22px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.cart-remove-icon:hover {
+  filter: grayscale(0%);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+/* Cart totals and promo code section */
+.cartitems-down {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cartitems-total {
+  flex: 1 1 300px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 0.05);
+}
+
+.cartitems-total h1 {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.cartitems-total-item {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 0;
+}
+
+.cartitems-total-item p:first-child {
+  color: #555;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.cartitems-total-item p:last-child {
+  color: #222;
+}
+
+.cartitems-total button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px 0;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cartitems-total button:hover {
+  background-color: #0056b3;
+}
+
+/* Promo code box */
+.cartitems-promocode {
+  flex: 1 1 300px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cartitems-promocode p {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #444;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.cartitems-promobox {
+  display: flex;
+  gap: 10px;
+}
+
+.cartitems-promobox input[type="text"] {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.cartitems-promobox input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+.cartitems-promobox button {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cartitems-promobox button:hover {
+  background-color: #1e7e34;
+}
+
+/* Responsive adjustments */
+@media (max-width: 650px) {
+  .cartitems-format-main,
+  .cartitems-format {
+    grid-template-columns: 60px 2fr 1fr 1fr 1fr 40px;
+    font-size: 12px;
+  }
+
+  .carticon-product-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cartitems-quantity button {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+
+  .cartitems-total,
+  .cartitems-promocode {
+    flex: 1 1 100%;
+  }
+}
